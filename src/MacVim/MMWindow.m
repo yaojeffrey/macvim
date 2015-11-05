@@ -108,6 +108,14 @@ static CGSSetWindowBackgroundBlurRadiusFunction* GetCGSSetWindowBackgroundBlurRa
     [super dealloc];
 }
 
+- (BOOL) canBecomeMainWindow {
+    return YES;
+}
+
+- (BOOL) canBecomeKeyWindow {
+    return YES;
+}
+
 - (BOOL)hideTablineSeparator:(BOOL)hide
 {
     BOOL isHidden = [tablineSeparator isHidden];
